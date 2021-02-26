@@ -13,11 +13,9 @@ jobs:
   run-it:
     runs-on: ubuntu-latest
     name: 签到
-    #if: github.event.repository.owner.id == github.event.sender.id
     steps:
         - name: Checkout codes
-          uses: actions/checkout@v2
-          
+          uses: actions/checkout@v2          
         - name: 运行时间
           run: |
            time=$(curl -s "http://quan.suning.com/getSysTime.do")
